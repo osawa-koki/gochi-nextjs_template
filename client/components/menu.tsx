@@ -8,13 +8,10 @@ function Menu() {
 
   useEffect(() => {
     setCurrentPage(window.location.pathname);
-    console.log(current_page);
-
   }, []);
 
   const PageChanged = () => {
     setCurrentPage(window.location.pathname);
-    console.log(current_page);
   };
 
   return (
