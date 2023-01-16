@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"net/http"
 	"os"
 	"path/filepath"
@@ -9,19 +10,19 @@ import (
 )
 
 func apiIndex(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("Hello I am a GET man."))
+	json.NewEncoder(w).Encode(map[string]string{"text": "I am a GET man"})
 }
 
 func apiCreate(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("Hello I am a POST man."))
+	json.NewEncoder(w).Encode(map[string]string{"text": "I am a POST man"})
 }
 
 func apiUpdate(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("Hello I am a PUT man."))
+	json.NewEncoder(w).Encode(map[string]string{"text": "I am a PUT man"})
 }
 
 func apiDelete(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("Hello I am a DELETE man."))
+	json.NewEncoder(w).Encode(map[string]string{"text": "I am a DELETE man"})
 }
 
 func main() {
@@ -29,6 +30,7 @@ func main() {
 
 	// API routes
 	r.Route("/api", func(r chi.Router) {
+		r.Use(setContentType)
 		r.Get("/", apiIndex)
 		r.Get("/get", apiIndex)
 		r.Post("/create", apiCreate)
@@ -42,4 +44,11 @@ func main() {
 	r.Handle("/*", http.StripPrefix("/", http.FileServer(filesDir)))
 
 	http.ListenAndServe(":3000", r)
+}
+
+func setContentType(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Content-Type", "application/json")
+		next.ServeHTTP(w, r)
+	})
 }
