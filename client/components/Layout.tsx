@@ -19,7 +19,8 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
     <header>
       <Pages />
     </header>
-      {children}
+    {children}
+    <footer><a href="https://github.com/osawa-koki">@osawa-koki</a></footer>
   </div>
 );
 
