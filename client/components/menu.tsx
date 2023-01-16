@@ -1,7 +1,7 @@
 import Link from "next/link";
 import pages from "../pages";
 
-function Pages() {
+function Menu() {
   return (
     <div id="Menu">
     {
@@ -17,4 +17,4 @@ function Pages() {
   );
 };
 
-export default Pages;
+export default Menu;
