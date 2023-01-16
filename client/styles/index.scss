@@ -12,4 +12,21 @@
     height: 100px;
     margin-top: 3rem;
   }
+  #IndexLink {
+    margin-top: 1rem;
+    display: flex;
+    a {
+      color: #0E6DFE;
+      text-decoration: none;
+      margin: 1rem;
+      &:last-child {
+        margin-right: 0;
+        padding-right: 0;
+        border-right: none;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }
