@@ -32,10 +32,9 @@ func main() {
 	r.Route("/api", func(r chi.Router) {
 		r.Use(setContentType)
 		r.Get("/", apiIndex)
-		r.Get("/get", apiIndex)
-		r.Post("/create", apiCreate)
-		r.Put("/update", apiUpdate)
-		r.Delete("/delete", apiDelete)
+		r.Post("/", apiCreate)
+		r.Put("/", apiUpdate)
+		r.Delete("/", apiDelete)
 	})
 
 	// Serve static files
