@@ -27,13 +27,13 @@ main {
   }
 }
 
-#Links {
+footer {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  background-color: lightgray;
   a {
-    margin-right: 0.5rem;
-    margin-bottom: 1rem;
-    padding-right: 0.5rem;
-    border-right: 1px lightgray solid;
     color: #0E6DFE;
     text-decoration: none;
     &:last-child {
