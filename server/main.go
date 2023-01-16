@@ -42,7 +42,7 @@ func main() {
 	filesDir := http.Dir(filepath.Join(workDir, "web"))
 	r.Handle("/*", http.StripPrefix("/", http.FileServer(filesDir)))
 
-	http.ListenAndServe(":3000", r)
+	http.ListenAndServe(":80", r)
 }
 
 func setContentType(next http.Handler) http.Handler {
