@@ -1,6 +1,6 @@
 # gochi-nextjs_template
 
-🌸🌸🌸 バックエンドはGo言語のchiフレームワークを、フロントエンドはReactのラッパーフレームワークであるNextjsを使用したプロジェクトテンプレート。  
+🌸🌸🌸 Go(chi)×Nextjsテンプレート。  
 Docker上で動作する。  
 
 ## 実行方法
