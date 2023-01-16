@@ -7,7 +7,7 @@ type Props = {
   children?: ReactNode,
   title?: string,
   menu?: boolean,
-  footer?: boolean
+  footer?: boolean,
 };
 
 const Layout = ({ children, title = setting.title, menu = true, footer = true }: Props) => (
@@ -18,7 +18,7 @@ const Layout = ({ children, title = setting.title, menu = true, footer = true }:
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <link rel="shortcut icon" href={`${setting.basePath}favicon.ico`} type="image/x-icon" />
     </Head>
-    <div>
+    <div id="Wrapper">
       { menu && Menu }
       <main>
         { children }
