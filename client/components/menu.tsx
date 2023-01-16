@@ -15,17 +15,23 @@ function Menu() {
   };
 
   return (
-    <div id="Menu">
-    {
-      pages.map((page, index: number) => {
-        return (
-          <Link key={index} href={page.path} className={`btn ${current_page === page.path ? 'btn-primary' : ''}`} onClick={PageChanged}>
-            {page.name}
-          </Link>
-        )
-      })
-    }
-    </div>
+    <>
+      <div id="Menu">
+      {
+        pages.map((page, index: number) => {
+          return (
+            <Link key={index} href={page.path} className={`btn ${current_page === page.path ? 'btn-primary' : ''}`} onClick={PageChanged}>
+              {page.name}
+            </Link>
+          )
+        })
+      }
+      </div>
+      <div id="ToMenu">
+        <button id="Closer"></button>
+        <i id="Opener"></i>
+      </div>
+    </>
   );
 };
 

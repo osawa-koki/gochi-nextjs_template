@@ -17,38 +17,11 @@
       height: 0;
       display: none;
     }
-    #Fixed {
-      #Opener {
-        position: fixed;
-        top: 0.5rem;
-        left: 0.5rem;
-        color: gray;
-        &:not(.on) {
-          display: none;
-        }
-      }
-      #Closer {
-        position: fixed;
-        top: 0.5rem;
-        right: 0.5rem;
-        &:not(.on) {
-          display: none;
-        }
-      }
-    }
   }
   @include media-breakpoint-up(md) {
     width: 200px;
     height: 100%;
     margin: 0;
-    #Fixed {
-      display: none;
-      button {
-        position: absolute;
-        top: 0.5rem;
-        right: 0.5rem;
-      }
-    }
   }
   margin-top: 1rem;
   padding: 1rem;
@@ -61,5 +34,35 @@
   }
   i {
     font-size: 1.5rem;
+  }
+}
+
+#ToMenu {
+  @include media-breakpoint-down(md) {
+    #Opener {
+      position: fixed;
+      top: 0.5rem;
+      left: 0.5rem;
+      color: gray;
+      &:not(.on) {
+        display: none;
+      }
+    }
+    #Closer {
+      position: fixed;
+      top: 0.5rem;
+      right: 0.5rem;
+      &:not(.on) {
+        display: none;
+      }
+    }
+  }
+  @include media-breakpoint-up(md) {
+    display: none;
+    button {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+    }
   }
 }
