@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import '../styles/styles.scss';
+import '../styles/menu.scss';
 
 import '../styles/index.scss';
 import '../styles/about.scss';

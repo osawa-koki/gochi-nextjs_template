@@ -19,10 +19,7 @@ const Layout = ({ children, title = setting.title, menu = true, footer = true }:
       <link rel="shortcut icon" href={`${setting.basePath}favicon.ico`} type="image/x-icon" />
     </Head>
     <div id="Wrapper">
-      { menu && <Menu /> }
-      <main>
-        { children }
-      </main>
+      { menu ? <><main>{ children }</main><Menu /></> : children }
     </div>
     { footer && <footer><a href="https://github.com/osawa-koki">@osawa-koki</a></footer> }
   </div>

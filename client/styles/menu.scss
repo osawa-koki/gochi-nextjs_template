@@ -1,0 +1,75 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+#Menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  background-color: RGBA(33, 37, 41, var(--bs-bg-opacity, 1));
+  z-index: 99;
+  @include media-breakpoint-down(md) {
+    height: 0;
+    &.on {
+      width: 100%;
+      height: 100%;
+    }
+    &.off {
+      height: 0;
+      #Content {
+      display: none;
+    }
+    }
+    #Fixed {
+      #Opener {
+        position: fixed;
+        top: 0.5rem;
+        left: 0.5rem;
+        color: gray;
+        &.on {
+        }
+        &.off {
+          display: none;
+        }
+      }
+      #Closer {
+        position: fixed;
+        top: 0.5rem;
+        right: 0.5rem;
+        &.on {
+        }
+        &.off {
+          display: none;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-up(md) {
+    width: 200px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    #Fixed {
+      display: none;
+      button {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+      }
+    }
+  }
+  #Content {
+    padding: 1rem;
+    #Features {
+      display: flex;
+      flex-direction: column;
+      button {
+        color: whitesmoke;
+        margin-top: 0.5rem;
+        text-align: left;
+      }
+    }
+  }
+  i {
+    font-size: 1.5rem;
+  }
+}
