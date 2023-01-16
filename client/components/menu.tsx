@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import pages from "../pages";
+import { Button } from "react-bootstrap";
+import { BsGearFill } from "react-icons/bs";
 
 function Menu() {
 
@@ -28,8 +30,8 @@ function Menu() {
       }
       </div>
       <div id="ToMenu">
-        <button id="Closer"></button>
-        <i id="Opener"></i>
+        <Button id="Closer" variant="primary"></Button>
+        <BsGearFill id="Opener"></BsGearFill>
       </div>
     </>
   );
