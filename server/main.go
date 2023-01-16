@@ -37,7 +37,7 @@ func main() {
 
 	// Serve static files
 	workDir, _ := os.Getwd()
-	filesDir := filepath.Join(workDir, "static")
+	filesDir := filepath.Join(workDir, "web")
 	r.FileServer("/", http.Dir(filesDir))
 
 	http.ListenAndServe(":3000", r)
