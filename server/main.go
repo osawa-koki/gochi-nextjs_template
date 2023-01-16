@@ -10,19 +10,19 @@ import (
 )
 
 func apiIndex(w http.ResponseWriter, r *http.Request) {
-	json.NewEncoder(w).Encode(map[string]string{"text": "I am a GET man"})
+	json.NewEncoder(w).Encode(map[string]string{"text": "I am a GET man."})
 }
 
 func apiCreate(w http.ResponseWriter, r *http.Request) {
-	json.NewEncoder(w).Encode(map[string]string{"text": "I am a POST man"})
+	json.NewEncoder(w).Encode(map[string]string{"text": "I am a POST man."})
 }
 
 func apiUpdate(w http.ResponseWriter, r *http.Request) {
-	json.NewEncoder(w).Encode(map[string]string{"text": "I am a PUT man"})
+	json.NewEncoder(w).Encode(map[string]string{"text": "I am a PUT man."})
 }
 
 func apiDelete(w http.ResponseWriter, r *http.Request) {
-	json.NewEncoder(w).Encode(map[string]string{"text": "I am a DELETE man"})
+	json.NewEncoder(w).Encode(map[string]string{"text": "I am a DELETE man."})
 }
 
 func main() {
