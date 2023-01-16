@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import Head from 'next/head';
 import setting from '../setting';
-import Pages from './pages';
+import Menu from './menu';
 
 type Props = {
   children?: ReactNode
@@ -16,10 +16,12 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <link rel="shortcut icon" href={`${setting.basePath}favicon.ico`} type="image/x-icon" />
     </Head>
-    <header>
-      <Pages />
-    </header>
-    {children}
+    <div>
+      { Menu }
+      <main>
+        { children }
+      </main>
+    </div>
     <footer><a href="https://github.com/osawa-koki">@osawa-koki</a></footer>
   </div>
 );

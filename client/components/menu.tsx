@@ -3,7 +3,7 @@ import pages from "../pages";
 
 function Pages() {
   return (
-    <div id="Links">
+    <div id="Menu">
     {
       pages.map((page, index: number) => {
         return (
