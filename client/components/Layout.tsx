@@ -4,11 +4,13 @@ import setting from '../setting';
 import Menu from './menu';
 
 type Props = {
-  children?: ReactNode
-  title?: string
+  children?: ReactNode,
+  title?: string,
+  menu?: boolean,
+  footer?: boolean
 };
 
-const Layout = ({ children, title = 'This is the default title' }: Props) => (
+const Layout = ({ children, title = setting.title, menu = true, footer = true }: Props) => (
   <div>
     <Head>
       <title>{title}</title>
@@ -17,12 +19,12 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
       <link rel="shortcut icon" href={`${setting.basePath}favicon.ico`} type="image/x-icon" />
     </Head>
     <div>
-      { Menu }
+      { menu && Menu }
       <main>
         { children }
       </main>
     </div>
-    <footer><a href="https://github.com/osawa-koki">@osawa-koki</a></footer>
+    { footer && <footer><a href="https://github.com/osawa-koki">@osawa-koki</a></footer> }
   </div>
 );
 
