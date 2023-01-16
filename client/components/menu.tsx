@@ -31,7 +31,7 @@ function Menu() {
       }
       </div>
       <div id="ToMenu">
-        <Button id="Closer" variant="primary" className={`btn-close btn-close-white ${menu_open && "on"}`} onClick={() => {setMenuOpen(false)}}></Button>
+        <Button id="Closer" variant="primary" className={`btn-close btn-close-white ${menu_open && 'on'}`} onClick={() => {setMenuOpen(false)}}></Button>
         <BsGearFill id="Opener" className={menu_open && "off"} onClick={() => {setMenuOpen(true)}}></BsGearFill>
       </div>
     </>
