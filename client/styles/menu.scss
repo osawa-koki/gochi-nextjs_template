@@ -47,7 +47,6 @@
     width: 200px;
     height: 100%;
     margin: 0;
-    padding: 0;
     #Fixed {
       display: none;
       button {
@@ -57,17 +56,14 @@
       }
     }
   }
-  #Content {
-    padding: 1rem;
-    #Features {
-      display: flex;
-      flex-direction: column;
-      button {
-        color: whitesmoke;
-        margin-top: 0.5rem;
-        text-align: left;
-      }
-    }
+  margin-top: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  a {
+    color: whitesmoke;
+    margin-top: 1rem;
+    text-align: left;
   }
   i {
     font-size: 1.5rem;
