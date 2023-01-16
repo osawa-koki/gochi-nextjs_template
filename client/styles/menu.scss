@@ -32,9 +32,6 @@
     margin-top: 1rem;
     text-align: left;
   }
-  i {
-    font-size: 1.5rem;
-  }
 }
 
 #ToMenu {
@@ -65,4 +62,8 @@
       right: 0.5rem;
     }
   }
+}
+
+svg {
+  font-size: 1.5rem;
 }
