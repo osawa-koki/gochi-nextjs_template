@@ -8,7 +8,7 @@
   background-color: RGBA(33, 37, 41, var(--bs-bg-opacity, 1));
   z-index: 99;
   @include media-breakpoint-down(md) {
-    height: 0;
+    margin: 0;
     &.on {
       width: 100%;
       height: 100%;
@@ -49,6 +49,7 @@
       position: fixed;
       top: 0.5rem;
       right: 0.5rem;
+      z-index: 999;
       &:not(.on) {
         display: none;
       }

@@ -7,6 +7,7 @@ import { BsGearFill } from "react-icons/bs";
 function Menu() {
 
   const [current_page, setCurrentPage] = useState<string | null>(null);
+  const [menu_open, setMenuOpen] = useState<boolean>(false);
 
   useEffect(() => {
     setCurrentPage(window.location.pathname);
@@ -18,7 +19,7 @@ function Menu() {
 
   return (
     <>
-      <div id="Menu">
+      <div id="Menu" className={menu_open && "on"}>
       {
         pages.map((page, index: number) => {
           return (
@@ -30,8 +31,8 @@ function Menu() {
       }
       </div>
       <div id="ToMenu">
-        <Button id="Closer" variant="primary"></Button>
-        <BsGearFill id="Opener"></BsGearFill>
+        <Button id="Closer" variant="primary" className={`btn-close btn-close-white ${menu_open && "on"}`} onClick={() => {setMenuOpen(false)}}></Button>
+        <BsGearFill id="Opener" className={menu_open && "off"} onClick={() => {setMenuOpen(true)}}></BsGearFill>
       </div>
     </>
   );
