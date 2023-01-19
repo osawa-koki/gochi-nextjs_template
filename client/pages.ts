@@ -12,6 +12,10 @@ const pages = [
     path: "/contact/",
     name: "Contact",
   },
+  {
+    path: "/info/",
+    name: "Info",
+  },
 ];
 
 export default pages;
